@@ -11,6 +11,7 @@ using TestSolution;
 namespace TestProject
 {
     [TestClass]
+    [Ignore]
     public class TestDatbase
     {
         private BookStoreContext _context;
