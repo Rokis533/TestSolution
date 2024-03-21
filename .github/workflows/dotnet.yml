@@ -32,11 +32,11 @@ jobs:
       - name: Build
         run: dotnet build --no-restore
       - name: Test
-        run: dotnet test --verbosity normal --logger "trx;LogFileName=test_results.trx"
+        run: dotnet test --verbosity normal --logger "trx;LogFileName=/home/runner/work/TestSolution/TestSolution/test_results.trx"
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: MS Tests
-          path: /home/runner/work/TestSolution/TestSolution/TestProject/TestResults/test_results.trx
+          path: /home/runner/work/TestSolution/TestSolution/test_results.trx
           reporter: 'dotnet-trx'
