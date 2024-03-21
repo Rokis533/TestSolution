@@ -30,6 +30,6 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Test
-        run: dotnet test --no-build --verbosity normal -c Release
+        run: dotnet test --no-build --verbosity normal
 
 
